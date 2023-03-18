@@ -1,0 +1,80 @@
+### LOGIN USER 
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json 
+
+{
+    "email" : "null33@gmail.com",
+    "password" : "123456 "
+}
+
+### LOGIN USER 
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json 
+
+{
+    "name" : "User12",
+    "email" : "null32@gmail.com",
+    "password" : "123456 ",
+    "type" : "Hospital",
+    "bloodGroup" : "A+"
+}
+
+### FETCH ALL AVAILABLE BLOOD SAMPLES IN ALL HOSPITALS
+GET http://localhost:5000/api/availableBloodSamples
+Content-Type: application/json
+
+### FETCH ALL REQUESTS OF PARTICULAR BLOOD TYPE
+GET http://localhost:5000/api/requests/B-
+Content-Type: application/json
+
+### FETCH ALL REQUESTS OF PARTICULAR BLOOD TYPE
+GET http://localhost:5000/api/requests/A+
+Content-Type: application/json
+
+### FETCH ALL SAMPLES UPLOADED BY A PARTICULAR HOSPITAL 
+GET http://localhost:5000/api/hospital/bloodSamples
+Content-Type: application/json
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTU5ZTg1YWM3YjY0ZDY4NjNjOWQ0ZCIsInR5cGUiOiJIb3NwaXRhbCIsImlhdCI6MTY3OTEzODQzNywiZXhwIjoxNjc5MTQyMDM3fQ.VloSaXsDM29Owmitd4gLFvPeYWpfCTupwmBfRGPazjY"
+}
+
+### ADD A SAMPLE
+POST http://localhost:5000/api/hospital/bloodSamples
+Content-Type: application/json
+
+{
+    "quantity" : 3,
+    "bloodType" : "B-", 
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTU5ZTg1YWM3YjY0ZDY4NjNjOWQ0ZCIsInR5cGUiOiJIb3NwaXRhbCIsImlhdCI6MTY3OTEzODQzNywiZXhwIjoxNjc5MTQyMDM3fQ.VloSaXsDM29Owmitd4gLFvPeYWpfCTupwmBfRGPazjY"
+}
+
+### UPDATE A SAMPLE 
+PUT http://localhost:5000/api/hospital/bloodSamples/64159ecdac7b64d6863c9d56
+Content-Type: application/json
+
+{
+    "quantity" : 4,
+    "bloodType" : "B-", 
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTU5ZTg1YWM3YjY0ZDY4NjNjOWQ0ZCIsInR5cGUiOiJIb3NwaXRhbCIsImlhdCI6MTY3OTEzODQzNywiZXhwIjoxNjc5MTQyMDM3fQ.VloSaXsDM29Owmitd4gLFvPeYWpfCTupwmBfRGPazjY"
+}
+
+### DELETE A SAMPLE 
+DELETE http://localhost:5000/api/hospital/bloodSamples/64159ecdac7b64d6863c9d56
+Content-Type: application/json
+
+{
+    "quantity" : 4,
+    "bloodType" : "B+", 
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTU5ZTg1YWM3YjY0ZDY4NjNjOWQ0ZCIsInR5cGUiOiJIb3NwaXRhbCIsImlhdCI6MTY3OTEzODQzNywiZXhwIjoxNjc5MTQyMDM3fQ.VloSaXsDM29Owmitd4gLFvPeYWpfCTupwmBfRGPazjY"
+}
+
+### PLACE A REQUEST
+POST http://localhost:5000/api/receiver/requests 
+Content-Type: application/json
+
+{
+    "quantity" : 1,
+    "bloodType" : "B+", 
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTRlYTVkMDk3OTlkYWIxNmE2NjJmMiIsInR5cGUiOiJSZWNlaXZlciIsImlhdCI6MTY3OTEzODkxNywiZXhwIjoxNjc5MTQyNTE3fQ.IQoa7Nay574f_kRDd5qCiC_ysUBt7f8SJbo17XW0Tp0"
+}
